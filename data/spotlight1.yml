@@ -1,0 +1,19 @@
+####################### Spotlight #########################
+style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+id: "first"
+title: "Collaborations"
+content: |
+  Jamileh Hajihasan (Founder of <strong>Toranj Art Workshops</strong>) offers private classes and group workshops in
+  Persian carpet, kilim, and tapestry weaving. Over the years, she has collaborated with cultural and
+  community organizations across Toronto.<br><br>
+
+  <strong>Selected collaborations:</strong><br>
+  • <a href="/collaborations/willowdale/">Willowdale City Office</a><br>
+  • <a href="/collaborations/gibson-house/">Gibson House Museum</a><br>
+  • <a href="/collaborations/tirgan/">Tirgan Festival</a><br>
+  • <a href="/collaborations/sukoon-space/">Sukoon Space</a>
+button:
+  label: "Inquire About Workshops"
+  link: "#contact"
+
+image: "images/collaborations.jpg"

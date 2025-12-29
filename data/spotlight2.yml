@@ -1,0 +1,15 @@
+####################### Spotlight #########################
+style: "style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
+id: "workshops"
+title: "Workshops"
+content: |
+  Jamileh offers both private classes and group workshops in Persian carpet, kilim, and tapestry weaving.<br><br>
+
+  <strong>Workshop types:</strong><br>
+  • <a href="/workshops/private/">Private Classes</a><br>
+  • <a href="/workshops/group/">Group Workshops</a><br>
+  • <a href="/workshops/institutes/">Institutional Workshops</a>
+button:
+  label: "Contact for availability"
+  link: "#contact"
+image: "images/workshops.jpg"

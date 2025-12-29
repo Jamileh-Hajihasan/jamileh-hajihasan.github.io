@@ -1,0 +1,41 @@
+## -----------------------------------------------
+## Basic Configuration
+## -----------------------------------------------
+
+theme = "hugo-story"
+
+## -----------------------------------------------
+## Publish
+## -----------------------------------------------
+
+relativeURLs = "true"
+#canonifyURLs = "true"
+
+# Local
+baseURL = "/"
+publishDir = "public"
+
+# Remote
+#baseURL = "https://caressofsteel.github.io/demos/hugo/hugo-story/"
+#publishDir = "//centos/sites/hugodev/hugostory/"
+
+
+## -----------------------------------------------
+## Hugo Built-in Features
+## -----------------------------------------------
+
+disableKinds = ["taxonomy", "term"]
+# googleAnalytics = "G-XXXXXXXXXX"
+
+## -----------------------------------------------
+## Site Parameters
+## -----------------------------------------------
+
+[Params]
+
+[params.footer]
+copyright = "© Toranj Art Workshops — Jamileh Hajihasan"
+
+[params.social]
+instagram = "https://www.instagram.com/toranj.workshop/"
+email = "mailto:toranj.mtl@gmail.com"
