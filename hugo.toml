@@ -14,11 +14,11 @@ relativeURLs = "true"
 #canonifyURLs = "true"
 
 # Local preview (keep this for local)
-baseURL = "/"
-publishDir = "public"
+#baseURL = "/"
+#publishDir = "public"
 
-# GitHub Pages baseURL (we’ll switch to this when deploying)
-# baseURL = "https://jamileh-hajihasan.github.io/"
+#GitHub Pages baseURL (we’ll switch to this when deploying)
+baseURL = "https://jamileh-hajihasan.github.io/"
 
 # Remote
 #baseURL = "https://caressofsteel.github.io/demos/hugo/hugo-story/"
