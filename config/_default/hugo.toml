@@ -33,8 +33,8 @@ disableKinds = ["taxonomy", "term"]
 ## -----------------------------------------------
 
 [Params]
-  logo = "images/banner.jpg"
-  favicon = "favicon.png"
+logo = "images/banner.jpg"
+favicon = "favicon.png"
 
 [params.footer]
 copyright = "© Toranj Art Workshops — Jamileh Hajihasan"
