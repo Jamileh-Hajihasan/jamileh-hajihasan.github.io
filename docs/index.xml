@@ -1,60 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo Story</title>
-    <link>https://jamileh-hajihasan.github.io/</link>
-    <description>Recent content on Hugo Story</description>
+    <title>Jamileh Hajihasan – Textile Artist</title>
+    <link>https://jamileh-hajihasan.ca/</link>
+    <description>Recent content on Jamileh Hajihasan – Textile Artist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>{year}</copyright>
-    <atom:link href="https://jamileh-hajihasan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jamileh-hajihasan.ca/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gibson House Museum</title>
-      <link>https://jamileh-hajihasan.github.io/collaborations/gibson-house/</link>
+      <link>https://jamileh-hajihasan.ca/collaborations/gibson-house/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jamileh-hajihasan.github.io/collaborations/gibson-house/</guid>
+      <guid>https://jamileh-hajihasan.ca/collaborations/gibson-house/</guid>
       <description>Description here.</description>
     </item>
     <item>
       <title>Group Workshops</title>
-      <link>https://jamileh-hajihasan.github.io/workshops/group/</link>
+      <link>https://jamileh-hajihasan.ca/workshops/group/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jamileh-hajihasan.github.io/workshops/group/</guid>
+      <guid>https://jamileh-hajihasan.ca/workshops/group/</guid>
       <description>Hands-on group workshops for community spaces, cultural events, and creative gatherings.&#xA;Good for&#xA;Beginner-friendly introductions Short sessions (1–3 hours) or multi-week series Team-building and cultural programming </description>
     </item>
     <item>
       <title>Institutional Workshops</title>
-      <link>https://jamileh-hajihasan.github.io/workshops/institutes/</link>
+      <link>https://jamileh-hajihasan.ca/workshops/institutes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jamileh-hajihasan.github.io/workshops/institutes/</guid>
+      <guid>https://jamileh-hajihasan.ca/workshops/institutes/</guid>
       <description>Workshops designed for museums, festivals, galleries, and organizations — combining demonstration, storytelling, and guided making.</description>
     </item>
     <item>
       <title>Private Classes</title>
-      <link>https://jamileh-hajihasan.github.io/workshops/private/</link>
+      <link>https://jamileh-hajihasan.ca/workshops/private/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jamileh-hajihasan.github.io/workshops/private/</guid>
+      <guid>https://jamileh-hajihasan.ca/workshops/private/</guid>
       <description>Private one-on-one (or small group) classes tailored to your level — from beginner foundations to advanced patterns and finishing.&#xA;Typical topics&#xA;Loom setup &amp;amp; warping Basic knots &amp;amp; weaving techniques Pattern reading &amp;amp; color planning Finishing and care </description>
     </item>
     <item>
       <title>Sukoon Space</title>
-      <link>https://jamileh-hajihasan.github.io/collaborations/sukoon-space/</link>
+      <link>https://jamileh-hajihasan.ca/collaborations/sukoon-space/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jamileh-hajihasan.github.io/collaborations/sukoon-space/</guid>
+      <guid>https://jamileh-hajihasan.ca/collaborations/sukoon-space/</guid>
       <description>Description here.</description>
     </item>
     <item>
       <title>Tirgan Festival</title>
-      <link>https://jamileh-hajihasan.github.io/collaborations/tirgan/</link>
+      <link>https://jamileh-hajihasan.ca/collaborations/tirgan/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jamileh-hajihasan.github.io/collaborations/tirgan/</guid>
+      <guid>https://jamileh-hajihasan.ca/collaborations/tirgan/</guid>
       <description>Description here.</description>
     </item>
     <item>
       <title>Willowdale City Office</title>
-      <link>https://jamileh-hajihasan.github.io/collaborations/willowdale/</link>
+      <link>https://jamileh-hajihasan.ca/collaborations/willowdale/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jamileh-hajihasan.github.io/collaborations/willowdale/</guid>
+      <guid>https://jamileh-hajihasan.ca/collaborations/willowdale/</guid>
       <description>A short description of the workshop: what was taught, who attended, and what made it special.&#xA;Format: Private / Group workshop&#xA;Location: Toronto&#xA;Topics: Carpet / Kilim / Tapestry weaving</description>
     </item>
   </channel>
