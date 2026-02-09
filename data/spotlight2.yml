@@ -9,7 +9,7 @@ content: |
   <strong>Workshop types:</strong><br>
   • <a href="/workshops/private/">Private Classes</a><br>
   • <a href="/workshops/group/">Group Workshops</a><br>
-  • <a href="/workshops/institutes/">Institutional Workshops</a>
+
 button:
   label: "Contact for availability"
   link: "#contact"

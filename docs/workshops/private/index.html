@@ -35,59 +35,178 @@
       </div>
     </div>
 
-    <div class="grid">
-      <div>
-        <div class="slider" id="slider">
+    
+  <div class="grid" style="margin-bottom: 64px;">
+    <div>
+      <div class="slider" id="slider-0">
+        
+        
           
+            <img
+              class="slide active"
+              src="../../images/workshops/private/01.jpg"
+              alt="Workshop photo 1"
+              data-slider="0"
+            >
           
-            
-              <img class="slide active" src="../../images/workshops/private/01.jpg" alt="Workshop photo 1">
-            
-              <img class="slide " src="../../images/workshops/private/02.jpg" alt="Workshop photo 2">
-            
-              <img class="slide " src="../../images/workshops/private/03.jpg" alt="Workshop photo 3">
-            
-          
-        </div>
-
-        <div class="controls">
-          <button class="btn" id="prev">Prev</button>
-          <button class="btn" id="next">Next</button>
-        </div>
+        
       </div>
 
-      <div class="text">
-        <p>Private one-on-one (or small group) classes tailored to your level — from beginner foundations to advanced patterns and finishing.</p>
+      <div class="controls">
+        <button class="btn prev" data-slider="0">Prev</button>
+        <button class="btn next" data-slider="0">Next</button>
+      </div>
+    </div>
+
+    <div class="text">
+      <h2>Carpet Weaving</h2>
+      <p>Private one-on-one (or small group) classes tailored to beginners.</p>
 <p><strong>Typical topics</strong></p>
 <ul>
 <li>Loom setup &amp; warping</li>
 <li>Basic knots &amp; weaving techniques</li>
-<li>Pattern reading &amp; color planning</li>
 <li>Finishing and care</li>
 </ul>
 
-      </div>
     </div>
   </div>
 
+  <div class="grid" style="margin-bottom: 64px;">
+    <div>
+      <div class="slider" id="slider-1">
+        
+        
+          
+            <img
+              class="slide active"
+              src="../../images/workshops/private/02.jpg"
+              alt="Workshop photo 1"
+              data-slider="1"
+            >
+          
+            <img
+              class="slide "
+              src="../../images/workshops/private/03.jpg"
+              alt="Workshop photo 2"
+              data-slider="1"
+            >
+          
+            <img
+              class="slide "
+              src="../../images/workshops/private/04.jpg"
+              alt="Workshop photo 3"
+              data-slider="1"
+            >
+          
+            <img
+              class="slide "
+              src="../../images/workshops/private/05.jpg"
+              alt="Workshop photo 4"
+              data-slider="1"
+            >
+          
+            <img
+              class="slide "
+              src="../../images/workshops/private/06.jpg"
+              alt="Workshop photo 5"
+              data-slider="1"
+            >
+          
+            <img
+              class="slide "
+              src="../../images/workshops/private/07.jpg"
+              alt="Workshop photo 6"
+              data-slider="1"
+            >
+          
+        
+      </div>
+
+      <div class="controls">
+        <button class="btn prev" data-slider="1">Prev</button>
+        <button class="btn next" data-slider="1">Next</button>
+      </div>
+    </div>
+
+    <div class="text">
+      <h2>Kilim Weaving</h2>
+      <p>Intermediate-level classes focused on patterns and structure.</p>
+<p><strong>Typical topics</strong></p>
+<ul>
+<li>Pattern reading</li>
+<li>Color planning</li>
+<li>Tension control</li>
+</ul>
+
+    </div>
+  </div>
+
+  <div class="grid" style="margin-bottom: 64px;">
+    <div>
+      <div class="slider" id="slider-2">
+        
+        
+          
+            <img
+              class="slide active"
+              src="../../images/workshops/private/08.jpg"
+              alt="Workshop photo 1"
+              data-slider="2"
+            >
+          
+            <img
+              class="slide "
+              src="../../images/workshops/private/09.jpg"
+              alt="Workshop photo 2"
+              data-slider="2"
+            >
+          
+            <img
+              class="slide "
+              src="../../images/workshops/private/10.jpg"
+              alt="Workshop photo 3"
+              data-slider="2"
+            >
+          
+        
+      </div>
+
+      <div class="controls">
+        <button class="btn prev" data-slider="2">Prev</button>
+        <button class="btn next" data-slider="2">Next</button>
+      </div>
+    </div>
+
+    <div class="text">
+      <h2>Tapestry Weaving</h2>
+      <p>Advanced sessions for experienced weavers.</p>
+<p><strong>Typical topics</strong></p>
+<ul>
+<li>Complex patterns</li>
+<li>Advanced finishing</li>
+<li>Design critique</li>
+</ul>
+
+    </div>
+  </div>
+
+
   <script>
-    (function () {
-      const slides = Array.from(document.querySelectorAll(".slide"));
-      if (slides.length <= 1) return;
+  document.querySelectorAll(".grid").forEach((grid) => {
+    const slides = Array.from(grid.querySelectorAll(".slide"));
+    if (slides.length <= 1) return;
 
-      let idx = 0;
-      const show = (i) => {
-        slides[idx].classList.remove("active");
-        idx = (i + slides.length) % slides.length;
-        slides[idx].classList.add("active");
-      };
+    let idx = 0;
 
-      document.getElementById("prev").addEventListener("click", () => show(idx - 1));
-      document.getElementById("next").addEventListener("click", () => show(idx + 1));
+    const show = (i) => {
+      slides[idx].classList.remove("active");
+      idx = (i + slides.length) % slides.length;
+      slides[idx].classList.add("active");
+    };
 
-      
-      setInterval(() => show(idx + 1), 5000);
-    })();
-  </script>
-</body>
-</html>
+    grid.querySelector(".prev").addEventListener("click", () => show(idx - 1));
+    grid.querySelector(".next").addEventListener("click", () => show(idx + 1));
+
+    setInterval(() => show(idx + 1), 5000);
+  });
+</script>
