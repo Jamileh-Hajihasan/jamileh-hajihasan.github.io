@@ -35,67 +35,230 @@
       </div>
     </div>
 
-    <div class="grid">
-      <div>
-        <div class="slider" id="slider">
-          
-          
-            
-              <img class="slide active" src="../../images/collaborations/2025toranjgallary/01.jpg" alt="Workshop photo 1">
-            
-              <img class="slide " src="../../images/collaborations/2025toranjgallary/02.jpg" alt="Workshop photo 2">
-            
-              <img class="slide " src="../../images/collaborations/2025toranjgallary/03.jpg" alt="Workshop photo 3">
-            
-              <img class="slide " src="../../images/collaborations/2025toranjgallary/04.jpg" alt="Workshop photo 4">
-            
-              <img class="slide " src="../../images/collaborations/2025toranjgallary/05.jpg" alt="Workshop photo 5">
-            
-              <img class="slide " src="../../images/collaborations/2025toranjgallary/06.jpg" alt="Workshop photo 6">
-            
-              <img class="slide " src="../../images/collaborations/2025toranjgallary/07.jpg" alt="Workshop photo 7">
-            
-              <img class="slide " src="../../images/collaborations/2025toranjgallary/08.jpg" alt="Workshop photo 8">
+    
+  <div class="grid" style="margin-bottom: 64px;">
+    <div>
+      <div class="slider" id="slider-0">
+        
+        
+	  
+	     
+	      <video
+	        class="slide active"
+                muted
+                loop
+                playsinline
+                data-slider="0"
+              >
+		<source src="../../videos/collaborations/2025toranjgallary/15.mp4" type="video/mp4">
+	      </video>
             
           
-        </div>
-
-        <div class="controls">
-          <button class="btn" id="prev">Prev</button>
-          <button class="btn" id="next">Next</button>
-        </div>
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/01.jpg"
+                alt="Workshop media 2"
+                data-slider="0"
+              >
+            
+          
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/02.jpg"
+                alt="Workshop media 3"
+                data-slider="0"
+              >
+            
+          
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/03.jpg"
+                alt="Workshop media 4"
+                data-slider="0"
+              >
+            
+          
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/04.jpg"
+                alt="Workshop media 5"
+                data-slider="0"
+              >
+            
+          
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/05.jpg"
+                alt="Workshop media 6"
+                data-slider="0"
+              >
+            
+          
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/06.jpg"
+                alt="Workshop media 7"
+                data-slider="0"
+              >
+            
+          
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/07.jpg"
+                alt="Workshop media 8"
+                data-slider="0"
+              >
+            
+          
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/08.jpg"
+                alt="Workshop media 9"
+                data-slider="0"
+              >
+            
+          
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/09.jpg"
+                alt="Workshop media 10"
+                data-slider="0"
+              >
+            
+          
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/10.jpg"
+                alt="Workshop media 11"
+                data-slider="0"
+              >
+            
+          
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/11.jpg"
+                alt="Workshop media 12"
+                data-slider="0"
+              >
+            
+          
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/12.jpg"
+                alt="Workshop media 13"
+                data-slider="0"
+              >
+            
+          
+	    
+              <img
+                class="slide "
+                src="../../images/collaborations/2025toranjgallary/13.jpg"
+                alt="Workshop media 14"
+                data-slider="0"
+              >
+            
+          
+	     
+	      <video
+	        class="slide "
+                muted
+                loop
+                playsinline
+                data-slider="0"
+              >
+		<source src="../../videos/collaborations/2025toranjgallary/14.mp4" type="video/mp4">
+	      </video>
+            
+          
+        
       </div>
 
-      <div class="text">
-        <p><strong>Toranj Gallary 2025 - Threads of Home</strong> <br>
-<strong>Collaborators:</strong> Gibson House Museum</p>
+      <div class="controls">
+        <button class="btn prev" data-slider="0">Prev</button>
+        <button class="btn next" data-slider="0">Next</button>
+      </div>
+    </div>
+
+    <div class="text">
+      <h2>Toranj Gallary 2025 - Threads of Home</h2>
+      <p><strong>Collaborators:</strong> Gibson House Museum</p>
 <p><strong>Format:</strong> Exhibition <br>
 <strong>Location:</strong> Toronto <br>
 <strong>Topics:</strong> Carpet / Kilim weaving</p>
 <p>From July 2 to Mid October 2025, Toranj art group presented a pop-up installation called “Threads of Home” at the Gibson House Museum, where a selection of our artworks was exhibited and four days of carpet and kilim weaving workshops conducted alongside the installation.</p>
 
-      </div>
     </div>
   </div>
 
+
   <script>
-    (function () {
-      const slides = Array.from(document.querySelectorAll(".slide"));
-      if (slides.length <= 1) return;
+  document.querySelectorAll(".grid").forEach((grid) => {
+    const slides = Array.from(grid.querySelectorAll(".slide"));
+    if (slides.length <= 1) return;
 
-      let idx = 0;
-      const show = (i) => {
-        slides[idx].classList.remove("active");
-        idx = (i + slides.length) % slides.length;
-        slides[idx].classList.add("active");
-      };
+    let idx = 0;
+    let timer = null;
 
-      document.getElementById("prev").addEventListener("click", () => show(idx - 1));
-      document.getElementById("next").addEventListener("click", () => show(idx + 1));
+    const clearTimer = () => {
+      if (timer) {
+        clearTimeout(timer);
+        timer = null;
+      }
+    };
+
+    const scheduleNext = (delay = 5000) => {
+      clearTimer();
+      timer = setTimeout(() => show(idx + 1), delay);
+    };
+
+    const show = (i) => {
+      clearTimer();
 
       
-      setInterval(() => show(idx + 1), 5000);
-    })();
-  </script>
-</body>
-</html>
+      const current = slides[idx];
+      if (current.tagName === "VIDEO") {
+        current.pause();
+        current.currentTime = 0;
+      }
+      current.classList.remove("active");
+
+      
+      idx = (i + slides.length) % slides.length;
+      const next = slides[idx];
+      next.classList.add("active");
+
+      
+      if (next.tagName === "VIDEO") {
+        next.play().catch(() => {});
+        next.onended = () => show(idx + 1); 
+      } else {
+        scheduleNext(5000); 
+      }
+    };
+
+    grid.querySelector(".prev").addEventListener("click", () => show(idx - 1));
+    grid.querySelector(".next").addEventListener("click", () => show(idx + 1));
+
+    
+    const first = slides[0];
+    if (first.tagName === "VIDEO") {
+      first.play().catch(() => {});
+      first.onended = () => show(1);
+    } else {
+      scheduleNext(5000);
+    }
+  });
+</script>

@@ -35,49 +35,103 @@
       </div>
     </div>
 
-    <div class="grid">
-      <div>
-        <div class="slider" id="slider">
-          {{ $imgs := .Params.images }}
-          {{ if $imgs }}
-            {{ range $i, $src := $imgs }}
-              <img class="slide {{ if eq $i 0 }}active{{ end }}" src="{{ $src | relURL }}" alt="Workshop photo {{ add $i 1 }}">
+    {{ range $si, $section := .Params.sections }}
+  <div class="grid" style="margin-bottom: 64px;">
+    <div>
+      <div class="slider" id="slider-{{ $si }}">
+        {{ $imgs := $section.images }}
+        {{ if $imgs }}
+	  {{ range $i, $src := $imgs }}
+	    {{ if strings.HasSuffix $src ".mp4" }} 
+	      <video
+	        class="slide {{ if eq $i 0 }}active{{ end }}"
+                muted
+                loop
+                playsinline
+                data-slider="{{ $si }}"
+              >
+		<source src="{{ $src | relURL }}" type="video/mp4">
+	      </video>
+            {{ else }}
+              <img
+                class="slide {{ if eq $i 0 }}active{{ end }}"
+                src="{{ $src | relURL }}"
+                alt="Workshop media {{ add $i 1 }}"
+                data-slider="{{ $si }}"
+              >
             {{ end }}
-          {{ else }}
-            <img class="slide active" src="{{ "images/collaborations.jpg" | relURL }}" alt="Workshop photo placeholder">
           {{ end }}
-        </div>
-
-        <div class="controls">
-          <button class="btn" id="prev">Prev</button>
-          <button class="btn" id="next">Next</button>
-        </div>
+        {{ end }}
       </div>
 
-      <div class="text">
-        {{ .Content }}
+      <div class="controls">
+        <button class="btn prev" data-slider="{{ $si }}">Prev</button>
+        <button class="btn next" data-slider="{{ $si }}">Next</button>
       </div>
     </div>
+
+    <div class="text">
+      <h2>{{ $section.title }}</h2>
+      {{ $section.description | markdownify }}
+    </div>
   </div>
+{{ end }}
 
   <script>
-    (function () {
-      const slides = Array.from(document.querySelectorAll(".slide"));
-      if (slides.length <= 1) return;
+  document.querySelectorAll(".grid").forEach((grid) => {
+    const slides = Array.from(grid.querySelectorAll(".slide"));
+    if (slides.length <= 1) return;
 
-      let idx = 0;
-      const show = (i) => {
-        slides[idx].classList.remove("active");
-        idx = (i + slides.length) % slides.length;
-        slides[idx].classList.add("active");
-      };
+    let idx = 0;
+    let timer = null;
 
-      document.getElementById("prev").addEventListener("click", () => show(idx - 1));
-      document.getElementById("next").addEventListener("click", () => show(idx + 1));
+    const clearTimer = () => {
+      if (timer) {
+        clearTimeout(timer);
+        timer = null;
+      }
+    };
 
-      // Auto-advance every 5 seconds
-      setInterval(() => show(idx + 1), 5000);
-    })();
-  </script>
-</body>
-</html>
+    const scheduleNext = (delay = 5000) => {
+      clearTimer();
+      timer = setTimeout(() => show(idx + 1), delay);
+    };
+
+    const show = (i) => {
+      clearTimer();
+
+      // cleanup current slide
+      const current = slides[idx];
+      if (current.tagName === "VIDEO") {
+        current.pause();
+        current.currentTime = 0;
+      }
+      current.classList.remove("active");
+
+      // show next
+      idx = (i + slides.length) % slides.length;
+      const next = slides[idx];
+      next.classList.add("active");
+
+      // behavior by type
+      if (next.tagName === "VIDEO") {
+        next.play().catch(() => {});
+        next.onended = () => show(idx + 1); // WAIT until video ends
+      } else {
+        scheduleNext(5000); // images = 5s
+      }
+    };
+
+    grid.querySelector(".prev").addEventListener("click", () => show(idx - 1));
+    grid.querySelector(".next").addEventListener("click", () => show(idx + 1));
+
+    // init
+    const first = slides[0];
+    if (first.tagName === "VIDEO") {
+      first.play().catch(() => {});
+      first.onended = () => show(1);
+    } else {
+      scheduleNext(5000);
+    }
+  });
+</script>
