@@ -47,3 +47,12 @@ sections:
       - Advanced finishing
       - Design critique
 ---
+Whether you are drawn to the intricate knots of a Persian Carpet or the modern textures of Tapestry and Kilim, our courses offer a hands-on journey into textile art.
+
+We provide a complete setup—from professional-grade looms and yarns to a specialized bilingual guidebook for our carpet enthusiasts. Over the course of 4 to 8 sessions (90 minutes each), you will receive dedicated 1-on-1 supervision. Our goal is to ensure your technique is flawless, teaching you how to anticipate and correct imperfections to create a masterpiece you can be proud of.
+
+**Hands-on Training:** Master complex weaving techniques with real-time monitoring and error prevention.  
+**All-Inclusive:** We provide all tools, materials, and a bilingual (FA/EN) textbook for carpet students.  
+**Flexible Learning:**  
+- Carpet: 6–8 sessions (1–1.5 hours each)  
+- Kilim/Tapestry: 4 sessions (1–1.5 hours each)
