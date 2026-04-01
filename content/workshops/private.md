@@ -6,9 +6,10 @@ sections:
   - title: "Carpet Weaving"
     images:
       - "images/workshops/private/01.jpg"
+      - "images/workshops/private/02.jpg"
 
     description: |
-      Private one-on-one (or small group) classes tailored to beginners.
+      **Carpet** is a floor covering made from thick woven fibers, characterized by a pile (raised surface of cut or uncut yarn loops). Private one-on-one (or small group) classes are offered tailored for beginners or experienced weavers.
 
       **Typical topics**
       - Loom setup & warping
@@ -17,15 +18,15 @@ sections:
 
   - title: "Kilim Weaving"
     images:
-      - "images/workshops/private/02.jpg"
       - "images/workshops/private/03.jpg"
       - "images/workshops/private/04.jpg"
       - "images/workshops/private/05.jpg"
       - "images/workshops/private/06.jpg"
       - "images/workshops/private/07.jpg"
+      - "images/workshops/private/08.jpg"
 
     description: |
-      Intermediate-level classes focused on patterns and structure.
+      **Kilim** is a flat-woven textile with a flat smooth surface (without pile) produced by tightly interweaving the warp (vertical) and weft (horizontal) strands, frequently featuring bold geometric patterns. Private one-on-one (or small group) classes are offered tailored for beginners or experienced weavers.
 
       **Typical topics**
       - Pattern reading
@@ -34,12 +35,12 @@ sections:
 
   - title: "Tapestry Weaving"
     images:
-      - "images/workshops/private/08.jpg"
       - "images/workshops/private/09.jpg"
       - "images/workshops/private/10.jpg"
+      - "images/workshops/private/11.jpg"
 
     description: |
-      Advanced sessions for experienced weavers.
+      **Tapestry** is a handwoven textile art form that integrates a range of traditional weaving techniques, including kilim weaving, embroidery, knotting, and other related methods, into a unified composition. Private one-on-one (or small group) classes are offered tailored for beginners or experienced weavers.
 
       **Typical topics**
       - Complex patterns
