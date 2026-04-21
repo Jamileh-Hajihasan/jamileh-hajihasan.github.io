@@ -23,7 +23,23 @@
 
     .text { line-height: 1.6; font-size: 16px; }
     .muted { opacity: .75; font-size: 14px; }
+
+    .register-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: black;
+      color: white !important;
+      text-decoration: none;
+      font-weight: 600;
+     }
+
+    .register-btn:hover {
+      background: #333;
+     }
   </style>
+
 </head>
 <body>
   <div class="wrap">
@@ -46,13 +62,25 @@
       <div class="slider" id="slider-{{ $si }}">
         {{ $imgs := $section.images }}
         {{ if $imgs }}
-          {{ range $i, $src := $imgs }}
-            <img
-              class="slide {{ if eq $i 0 }}active{{ end }}"
-              src="{{ $src | relURL }}"
-              alt="Workshop photo {{ add $i 1 }}"
-              data-slider="{{ $si }}"
-            >
+	  {{ range $i, $src := $imgs }}
+	    {{ if strings.HasSuffix $src ".mp4" }} 
+	      <video
+	        class="slide {{ if eq $i 0 }}active{{ end }}"
+                muted
+                loop
+                playsinline
+                data-slider="{{ $si }}"
+              >
+		<source src="{{ $src | relURL }}" type="video/mp4">
+	      </video>
+            {{ else }}
+              <img
+                class="slide {{ if eq $i 0 }}active{{ end }}"
+                src="{{ $src | relURL }}"
+                alt="Workshop media {{ add $i 1 }}"
+                data-slider="{{ $si }}"
+              >
+            {{ end }}
           {{ end }}
         {{ end }}
       </div>
@@ -76,16 +104,55 @@
     if (slides.length <= 1) return;
 
     let idx = 0;
+    let timer = null;
+
+    const clearTimer = () => {
+      if (timer) {
+        clearTimeout(timer);
+        timer = null;
+      }
+    };
+
+    const scheduleNext = (delay = 5000) => {
+      clearTimer();
+      timer = setTimeout(() => show(idx + 1), delay);
+    };
 
     const show = (i) => {
-      slides[idx].classList.remove("active");
+      clearTimer();
+
+      // cleanup current slide
+      const current = slides[idx];
+      if (current.tagName === "VIDEO") {
+        current.pause();
+        current.currentTime = 0;
+      }
+      current.classList.remove("active");
+
+      // show next
       idx = (i + slides.length) % slides.length;
-      slides[idx].classList.add("active");
+      const next = slides[idx];
+      next.classList.add("active");
+
+      // behavior by type
+      if (next.tagName === "VIDEO") {
+        next.play().catch(() => {});
+        next.onended = () => show(idx + 1); // WAIT until video ends
+      } else {
+        scheduleNext(5000); // images = 5s
+      }
     };
 
     grid.querySelector(".prev").addEventListener("click", () => show(idx - 1));
     grid.querySelector(".next").addEventListener("click", () => show(idx + 1));
 
-    setInterval(() => show(idx + 1), 5000);
+    // init
+    const first = slides[0];
+    if (first.tagName === "VIDEO") {
+      first.play().catch(() => {});
+      first.onended = () => show(1);
+    } else {
+      scheduleNext(5000);
+    }
   });
 </script>

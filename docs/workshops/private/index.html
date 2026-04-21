@@ -23,7 +23,23 @@
 
     .text { line-height: 1.6; font-size: 16px; }
     .muted { opacity: .75; font-size: 14px; }
+
+    .register-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: black;
+      color: white !important;
+      text-decoration: none;
+      font-weight: 600;
+     }
+
+    .register-btn:hover {
+      background: #333;
+     }
   </style>
+
 </head>
 <body>
   <div class="wrap">
@@ -55,20 +71,24 @@
       <div class="slider" id="slider-0">
         
         
+	  
+	    
+              <img
+                class="slide active"
+                src="../../images/workshops/private/01.jpg"
+                alt="Workshop media 1"
+                data-slider="0"
+              >
+            
           
-            <img
-              class="slide active"
-              src="../../images/workshops/private/01.jpg"
-              alt="Workshop photo 1"
-              data-slider="0"
-            >
-          
-            <img
-              class="slide "
-              src="../../images/workshops/private/02.jpg"
-              alt="Workshop photo 2"
-              data-slider="0"
-            >
+	    
+              <img
+                class="slide "
+                src="../../images/workshops/private/02.jpg"
+                alt="Workshop media 2"
+                data-slider="0"
+              >
+            
           
         
       </div>
@@ -97,48 +117,60 @@
       <div class="slider" id="slider-1">
         
         
+	  
+	    
+              <img
+                class="slide active"
+                src="../../images/workshops/private/03.jpg"
+                alt="Workshop media 1"
+                data-slider="1"
+              >
+            
           
-            <img
-              class="slide active"
-              src="../../images/workshops/private/03.jpg"
-              alt="Workshop photo 1"
-              data-slider="1"
-            >
+	    
+              <img
+                class="slide "
+                src="../../images/workshops/private/04.jpg"
+                alt="Workshop media 2"
+                data-slider="1"
+              >
+            
           
-            <img
-              class="slide "
-              src="../../images/workshops/private/04.jpg"
-              alt="Workshop photo 2"
-              data-slider="1"
-            >
+	    
+              <img
+                class="slide "
+                src="../../images/workshops/private/05.jpg"
+                alt="Workshop media 3"
+                data-slider="1"
+              >
+            
           
-            <img
-              class="slide "
-              src="../../images/workshops/private/05.jpg"
-              alt="Workshop photo 3"
-              data-slider="1"
-            >
+	    
+              <img
+                class="slide "
+                src="../../images/workshops/private/06.jpg"
+                alt="Workshop media 4"
+                data-slider="1"
+              >
+            
           
-            <img
-              class="slide "
-              src="../../images/workshops/private/06.jpg"
-              alt="Workshop photo 4"
-              data-slider="1"
-            >
+	    
+              <img
+                class="slide "
+                src="../../images/workshops/private/07.jpg"
+                alt="Workshop media 5"
+                data-slider="1"
+              >
+            
           
-            <img
-              class="slide "
-              src="../../images/workshops/private/07.jpg"
-              alt="Workshop photo 5"
-              data-slider="1"
-            >
-          
-            <img
-              class="slide "
-              src="../../images/workshops/private/08.jpg"
-              alt="Workshop photo 6"
-              data-slider="1"
-            >
+	    
+              <img
+                class="slide "
+                src="../../images/workshops/private/08.jpg"
+                alt="Workshop media 6"
+                data-slider="1"
+              >
+            
           
         
       </div>
@@ -167,27 +199,33 @@
       <div class="slider" id="slider-2">
         
         
+	  
+	    
+              <img
+                class="slide active"
+                src="../../images/workshops/private/09.jpg"
+                alt="Workshop media 1"
+                data-slider="2"
+              >
+            
           
-            <img
-              class="slide active"
-              src="../../images/workshops/private/09.jpg"
-              alt="Workshop photo 1"
-              data-slider="2"
-            >
+	    
+              <img
+                class="slide "
+                src="../../images/workshops/private/10.jpg"
+                alt="Workshop media 2"
+                data-slider="2"
+              >
+            
           
-            <img
-              class="slide "
-              src="../../images/workshops/private/10.jpg"
-              alt="Workshop photo 2"
-              data-slider="2"
-            >
-          
-            <img
-              class="slide "
-              src="../../images/workshops/private/11.jpg"
-              alt="Workshop photo 3"
-              data-slider="2"
-            >
+	    
+              <img
+                class="slide "
+                src="../../images/workshops/private/11.jpg"
+                alt="Workshop media 3"
+                data-slider="2"
+              >
+            
           
         
       </div>
@@ -218,16 +256,55 @@
     if (slides.length <= 1) return;
 
     let idx = 0;
+    let timer = null;
+
+    const clearTimer = () => {
+      if (timer) {
+        clearTimeout(timer);
+        timer = null;
+      }
+    };
+
+    const scheduleNext = (delay = 5000) => {
+      clearTimer();
+      timer = setTimeout(() => show(idx + 1), delay);
+    };
 
     const show = (i) => {
-      slides[idx].classList.remove("active");
+      clearTimer();
+
+      
+      const current = slides[idx];
+      if (current.tagName === "VIDEO") {
+        current.pause();
+        current.currentTime = 0;
+      }
+      current.classList.remove("active");
+
+      
       idx = (i + slides.length) % slides.length;
-      slides[idx].classList.add("active");
+      const next = slides[idx];
+      next.classList.add("active");
+
+      
+      if (next.tagName === "VIDEO") {
+        next.play().catch(() => {});
+        next.onended = () => show(idx + 1); 
+      } else {
+        scheduleNext(5000); 
+      }
     };
 
     grid.querySelector(".prev").addEventListener("click", () => show(idx - 1));
     grid.querySelector(".next").addEventListener("click", () => show(idx + 1));
 
-    setInterval(() => show(idx + 1), 5000);
+    
+    const first = slides[0];
+    if (first.tagName === "VIDEO") {
+      first.play().catch(() => {});
+      first.onended = () => show(1);
+    } else {
+      scheduleNext(5000);
+    }
   });
 </script>
