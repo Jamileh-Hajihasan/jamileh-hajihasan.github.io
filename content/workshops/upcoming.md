@@ -7,6 +7,7 @@ sections:
     images:
       - "images/workshops/upcoming/01.jpg"
       - "videos/workshops/upcoming/01.mp4"
+      - "images/workshops/upcoming/02.jpg"
 
     description: |
       Something new this summer… and we’re so excited to share it with you! Toranj has been part of the GTA community for a while now, but this season, we’re bringing our Kilim Weaving Workshop to a beautiful new space at **Pickering Museum**.
@@ -14,7 +15,7 @@ sections:
       Join us for a cozy, hands-on experience where you’ll learn the art of traditional weaving, slow down, and create something truly your own. No experience needed; just come curious!
 
       **Dates:** July 12 and August 9 \
-      **Time:** 1:00–3:00 PM \
+      **Time:** 1:00 - 3:00 PM \
       **Location:** Pickering Museum
 
       Spots are limited! Click below to save yours!
@@ -23,7 +24,6 @@ sections:
 
   - title: "Community Kilim Mosaic: Weaving Together"
     images:
-      - "images/workshops/upcoming/02.jpg"
       - "images/workshops/upcoming/03.jpg"
       - "images/workshops/upcoming/04.jpg"
 
