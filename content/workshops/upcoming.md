@@ -25,6 +25,8 @@ sections:
     images:
       - "images/workshops/upcoming/02.jpg"
       - "images/workshops/upcoming/03.jpg"
+      - "images/workshops/upcoming/04.jpg"
+
 
     description: |
       Participants will learn to weave traditional Persian Kilim motifs into individual squares. These pieces will be collected and stitched into a large mosaic tapestry that reflects diverse community narratives.
