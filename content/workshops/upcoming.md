@@ -42,9 +42,37 @@ sections:
       **Time:** TBD (2 hours each)  \
       **Location:** Gibson House Museum 
 
+      Spots are limited! Click below to save yours!   \
+      **Registration will open soon!**
+
+
+  - title: "Summer Threads: Persian Kilim Weaving Workshop"
+    images:
+      - "images/workshops/upcoming/05.jpg"
+      - "images/workshops/upcoming/06.jpg"
+      - "images/workshops/upcoming/07.jpg"
+
+
+    description: |
+      Join us at the Orkid Gallery Collection for a cozy summer gathering filled with colorful kilim weaving, refreshing conversations, and good energy. No previous experience is required; just bring yourself and your creativity!
+
+      What you'll get:
+
+      - Step-by-step guidance from an experienced instructor
+      - All materials provided
+      - Your own unique handmade kilim to take home
+
+      Slow down, sip, weave, and connect.
+      Make memories, create something beautiful, and enjoy a perfect summer afternoon.
+      Spaces are limited. We can't wait to weave with you!
+
+
+      **Dates:** July. 15th and 29th, 2026  \
+      **Time:** 5:00 PM - 7:00 PM (2 hours each)  \
+      **Location:** Orkid Gallery Collection  
+
       Spots are limited! Click below to save yours!
 
-      Registration will open soon!
-
+      [Register Now](https://www.eventbrite.ca/e/summer-threads-persian-kilim-weaving-workshop-tickets-1992183237692)
 ---
 Check out all our upcoming workshops here!
