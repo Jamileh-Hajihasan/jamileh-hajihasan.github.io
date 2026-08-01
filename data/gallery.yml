@@ -66,3 +66,9 @@ pictures:
     image: "images/gallery/fulls/10.jpg"
     thumb: "images/gallery/thumbs/10.jpg"
     button: "View"
+
+  - title: "Kilim Tableau"
+    content: "Soumak Vase of Woven Blooms."
+    image: "images/gallery/fulls/11.jpg"
+    thumb: "images/gallery/thumbs/11.jpg"
+    button: "View"
