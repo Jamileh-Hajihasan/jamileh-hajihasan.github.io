@@ -43,7 +43,7 @@ sections:
       **Location:** Gibson House Museum 
 
       Spots are limited! Click below to save yours!   \
-      **Registration will open soon!**
+      [Register Now](https://www.toronto.ca/explore-enjoy/festivals-events/festivals-events-calendar/?event_id=069f3d4c-ccb7-49ca-a2dd-b22342c38a2a&event_name=Community%20Kilim%20Mosaic%3A%20Weaving%20Together%20at%20Gibson%20House&calendar_date=2026-09-12T14:00:00-04:00)
 
 
   - title: "Summer Threads: Persian Kilim Weaving Workshop"
